@@ -42,6 +42,14 @@ body.home {
 .home-insta a {
   color: #888;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.insta-icon {
+  width: 14px;
+  height: 14px;
 }
 
 .home-insta a:hover {
