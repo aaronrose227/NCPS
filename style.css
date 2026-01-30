@@ -163,3 +163,38 @@ a {
   color: #888;
   margin-top: 0.15rem;
 }
+
+/* Mobile */
+@media (max-width: 580px) {
+  .home-title {
+    font-size: 1.8rem;
+  }
+
+  .home-heading {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .home-logo {
+    width: 45px;
+  }
+
+  nav {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .site-logo {
+    width: 35px;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 1.3rem;
+  }
+}
