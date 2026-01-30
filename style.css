@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #2b2b2b;
+}
+
+body {
+  font-family: serif;
+  color: #fff;
+  background: #2b2b2b;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  line-height: 1.7;
+}
+
+/* Homepage - centered layout */
+body.home {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+}
+
+.home-content {
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Logo on homepage - inline next to title */
+.home-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-logo {
+  width: 55px;
+  height: auto;
+}
+
+.home-heading .home-title {
+  margin-bottom: 0;
+}
+
+/* Logo on subpages - top right */
+.site-logo {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Subpages */
+.back-link {
+  display: block;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+p {
+  font-family: serif;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  color: #ccc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.2rem;
+}
+
+ul li {
+  font-size: 1.05rem;
+  color: #ccc;
+  margin-bottom: 0.6rem;
+}
+
+ul li::before {
+  content: "— ";
+  color: #666;
+}
+
+a {
+  color: #fff;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.member {
+  margin-bottom: 1.4rem;
+}
+
+.member-name {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.member-detail {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.15rem;
+}

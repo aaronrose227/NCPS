@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sponsor us — ncps</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .poker-table-wrap {
+      margin: 2rem 0 3rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .poker-table {
+      position: relative;
+      width: 480px;
+      height: 280px;
+    }
+
+    .table-felt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 340px;
+      height: 180px;
+      border: 2px solid #555;
+      border-radius: 90px;
+      background: #1a3d1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .table-label {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: #5a8a5a;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .seat {
+      position: absolute;
+      text-align: center;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .seat-name {
+      font-family: serif;
+      font-size: 0.8rem;
+      color: #fff;
+      display: block;
+    }
+
+    .seat-name.taken {
+      color: #fff;
+    }
+
+    .seat-name.empty {
+      color: #555;
+      font-style: italic;
+    }
+
+    .seat-logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 0.3rem;
+    }
+
+    .seat-chip {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #555;
+      margin-bottom: 0.3rem;
+    }
+
+    .seat-chip.taken {
+      background: #e8c547;
+      border-color: #e8c547;
+    }
+
+    .seat-chip.empty {
+      background: transparent;
+    }
+
+    /* 6 seats around the table */
+    .seat-1 { top: -50px; left: 50%; transform: translateX(-50%); }
+    .seat-2 { top: 30px; right: -50px; }
+    .seat-3 { bottom: 30px; right: -50px; }
+    .seat-4 { bottom: -50px; left: 50%; transform: translateX(-50%); }
+    .seat-5 { bottom: 30px; left: -50px; }
+    .seat-6 { top: 30px; left: -50px; }
+  </style>
+</head>
+<body>
+  <img class="site-logo" src="logo.png" alt="NCPS">
+  <a class="back-link" href="index.html">← back to home</a>
+
+  <div class="post-header">
+    <h1 class="post-title">sponsor us</h1>
+  </div>
+
+  <div class="section">
+    <p>
+      We're a growing society of 70+ Oxford students who are engaged, competitive, and social. Sponsoring us puts your brand in front of a focused, high-calibre audience in an intimate college setting.
+    </p>
+  </div>
+
+  <div class="section">
+    <h1 class="post-title">our table</h1>
+    <div class="poker-table-wrap">
+      <div class="poker-table">
+        <div class="table-felt">
+          <span class="table-label">ncps</span>
+        </div>
+
+        <!-- Seat 1: SIG - top center -->
+        <div class="seat seat-1">
+          <img class="seat-logo" src="sig-logo.png" alt="Susquehanna SIG">
+          <span class="seat-name taken">Susquehanna</span>
+        </div>
+
+        <!-- Seat 2: empty -->
+        <div class="seat seat-2">
+          <span class="seat-chip empty"></span>
+          <span class="seat-name empty">open seat</span>
+        </div>
+
+        <!-- Seat 3: empty -->
+        <div class="seat seat-3">
+          <span class="seat-chip empty"></span>
+          <span class="seat-name empty">open seat</span>
+        </div>
+
+        <!-- Seat 4: empty -->
+        <div class="seat seat-4">
+          <span class="seat-chip empty"></span>
+          <span class="seat-name empty">open seat</span>
+        </div>
+
+        <!-- Seat 5: empty -->
+        <div class="seat seat-5">
+          <span class="seat-chip empty"></span>
+          <span class="seat-name empty">open seat</span>
+        </div>
+
+        <!-- Seat 6: empty -->
+        <div class="seat seat-6">
+          <span class="seat-chip empty"></span>
+          <span class="seat-name empty">open seat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1 class="post-title">what you get</h1>
+    <p>
+      Your brand in front of 70+ engaged Oxford students every week. Your logo on our posters and social media, and your opportunities circulated directly to our members via our WhatsApp group and channels.
+    </p>
+  </div>
+
+  <div class="section">
+    <h1 class="post-title">what it supports</h1>
+    <p>
+      Sponsorship helps us subsidise costs for members, get proper gear, support everyone who wants to play, and run events that bring people together.
+    </p>
+  </div>
+
+  <div class="section">
+    <h1 class="post-title">at a glance</h1>
+    <ul>
+      <li>~70 active members</li>
+      <li>Weekly cash game sessions</li>
+      <li>Teaching beginners the game and the theory behind it</li>
+      <li>Welcoming, low-stakes environment focused on playing good poker</li>
+      <li>Based at New College, University of Oxford</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <p>
+      We're open to partnerships of all sizes. If you're interested, we'd love to hear from you. <a href="contact.html">Get in touch</a>.
+    </p>
+  </div>
+</body>
+</html>
