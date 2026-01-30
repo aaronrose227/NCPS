@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .poker-table-wrap {
-      margin: 2rem 0 3rem;
+      margin: 3rem 0 4rem;
       display: flex;
       justify-content: center;
+      overflow: visible;
     }
 
     .poker-table {
       position: relative;
-      width: 480px;
-      height: 280px;
+      width: 90vw;
+      max-width: 480px;
+      aspect-ratio: 480 / 300;
     }
 
     .table-felt {
@@ -24,35 +26,59 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 340px;
-      height: 180px;
+      width: 70%;
+      height: 65%;
       border: 2px solid #555;
-      border-radius: 90px;
+      border-radius: 50%;
       background: #1a3d1a;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .table-label {
-      font-family: monospace;
-      font-size: 0.75rem;
-      color: #5a8a5a;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+    .table-logo {
+      width: 15%;
+      min-width: 30px;
+      height: auto;
+      opacity: 0.7;
+    }
+
+    /* CSS poker chips */
+    .chip {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px dashed rgba(255,255,255,0.3);
+      display: inline-block;
+    }
+
+    .chip-red { background: #b33; }
+    .chip-blue { background: #336; }
+    .chip-black { background: #222; }
+
+    .table-chips {
+      position: absolute;
+      display: flex;
+      gap: 4px;
+      z-index: 2;
+    }
+
+    .table-chips-1 {
+      top: 28%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .seat {
       position: absolute;
       text-align: center;
-      width: 180px;
+      width: 35%;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .seat-name {
-      font-family: serif;
       font-size: 0.8rem;
       color: #fff;
       display: block;
@@ -68,7 +94,8 @@
     }
 
     .seat-logo {
-      width: 180px;
+      width: 80%;
+      max-width: 180px;
       height: auto;
       margin-bottom: 0.3rem;
     }
@@ -82,55 +109,17 @@
       margin-bottom: 0.3rem;
     }
 
-    .seat-chip.taken {
-      background: #e8c547;
-      border-color: #e8c547;
-    }
-
     .seat-chip.empty {
       background: transparent;
     }
 
-    /* 6 seats around the table */
-    .seat-1 { top: -50px; left: 50%; transform: translateX(-50%); }
-    .seat-2 { top: 30px; right: -50px; }
-    .seat-3 { bottom: 30px; right: -50px; }
-    .seat-4 { bottom: -50px; left: 50%; transform: translateX(-50%); }
-    .seat-5 { bottom: 30px; left: -50px; }
-    .seat-6 { top: 30px; left: -50px; }
-
-    /* Mobile */
-    @media (max-width: 580px) {
-      .poker-table {
-        width: 300px;
-        height: 200px;
-      }
-
-      .table-felt {
-        width: 210px;
-        height: 120px;
-        border-radius: 60px;
-      }
-
-      .seat {
-        width: 100px;
-      }
-
-      .seat-logo {
-        width: 90px;
-      }
-
-      .seat-name {
-        font-size: 0.7rem;
-      }
-
-      .seat-1 { top: -40px; }
-      .seat-2 { top: 20px; right: -30px; }
-      .seat-3 { bottom: 20px; right: -30px; }
-      .seat-4 { bottom: -40px; }
-      .seat-5 { bottom: 20px; left: -30px; }
-      .seat-6 { top: 20px; left: -30px; }
-    }
+    /* 6 seats around the table - percentage based */
+    .seat-1 { top: -15%; left: 50%; transform: translateX(-50%); }
+    .seat-2 { top: 12%; right: -8%; }
+    .seat-3 { bottom: 12%; right: -8%; }
+    .seat-4 { bottom: -15%; left: 50%; transform: translateX(-50%); }
+    .seat-5 { bottom: 12%; left: -8%; }
+    .seat-6 { top: 12%; left: -8%; }
   </style>
 </head>
 <body>
@@ -152,13 +141,20 @@
     <div class="poker-table-wrap">
       <div class="poker-table">
         <div class="table-felt">
-          <span class="table-label">ncps</span>
+          <img class="table-logo" src="logo.png" alt="NCPS">
         </div>
 
         <!-- Seat 1: SIG - top center -->
         <div class="seat seat-1">
           <img class="seat-logo" src="sig-logo.png" alt="Susquehanna SIG">
           <span class="seat-name taken">Susquehanna</span>
+        </div>
+
+        <!-- SIG's chips on the table -->
+        <div class="table-chips table-chips-1">
+          <span class="chip chip-red"></span>
+          <span class="chip chip-blue"></span>
+          <span class="chip chip-black"></span>
         </div>
 
         <!-- Seat 2: empty -->
