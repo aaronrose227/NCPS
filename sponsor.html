@@ -74,6 +74,12 @@
       transform: translateX(-50%);
     }
 
+    .table-chips-4 {
+      bottom: 22%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .seat {
       position: absolute;
       text-align: center;
@@ -122,7 +128,8 @@
     .seat-1 { top: -5%; left: 50%; transform: translateX(-50%); }
     .seat-2 { top: 12%; right: -8%; }
     .seat-3 { bottom: 12%; right: -8%; }
-    .seat-4 { bottom: -15%; left: 50%; transform: translateX(-50%); }
+    .seat-4 { bottom: -18%; left: 50%; transform: translateX(-50%); }
+    .seat-4 .seat-logo { width: 90%; }
     .seat-5 { bottom: 12%; left: -8%; }
     .seat-6 { top: 12%; left: -8%; }
   </style>
@@ -173,10 +180,16 @@
           <span class="seat-name empty">open seat</span>
         </div>
 
-        <!-- Seat 4: empty -->
+        <!-- Seat 4: Jane Street - bottom center -->
         <div class="seat seat-4">
-          <span class="seat-chip empty"></span>
-          <span class="seat-name empty">open seat</span>
+          <img class="seat-logo" src="jane_street.png" alt="Jane Street">
+        </div>
+
+        <!-- Jane Street's chips on the table -->
+        <div class="table-chips table-chips-4">
+          <span class="chip chip-red"></span>
+          <span class="chip chip-blue"></span>
+          <span class="chip chip-black"></span>
         </div>
 
         <!-- Seat 5: empty -->
